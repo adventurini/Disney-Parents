@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import axios from 'axios';
+import axios from '../../node_modules/axios';
 import NavBar from '../components/NavBar'
 import PostComponent from '../components/PostComponent';
 import {Jumbotron, Container} from 'reactstrap'
@@ -21,7 +21,7 @@ export default class Profile extends Component {
     // addPost = (e, post) => {
     //     e.preventDefault();
     //     axios
-    //         .post('https://disney-parents-buddy.herokuapp.com//api/posts', post)
+    //         .post('https://disney-parents-buddy.herokuapp.com/api/posts', post)
     //         .then(res=> {
     //             this.setState({
     //                 posts: res.data

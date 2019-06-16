@@ -1,0 +1,3 @@
+[build]
+  base    = "./Disney-Buddy"
+  command = "yarn build"
