@@ -22,7 +22,7 @@ export default class Posts extends Component {
   getPosts = () => {
       const token = localStorage.getItem('token')
     axios
-      .get('https://disney-parent.herokuapp.com/api/posts', {headers: {Authorization: token}})
+      .get('https://disney-parents-buddy.herokuapp.com//api/posts', {headers: {Authorization: token}})
       .then(res=> 
         {console.log(res.data)
         this.setState({      
@@ -36,7 +36,7 @@ export default class Posts extends Component {
   getUsers = () => {
     const token = localStorage.getItem('token')
   axios
-    .get('https://disney-parent.herokuapp.com/api/users', {headers: {Authorization: token}})
+    .get('https://disney-parents-buddy.herokuapp.com//api/users', {headers: {Authorization: token}})
     .then(res=> 
       {console.log(res.data)
       this.setState({      
@@ -49,7 +49,7 @@ export default class Posts extends Component {
 
     updatePost = (post) => {
         axios
-        .put('https://disney-parent.herokuapp.com/api/posts', post)
+        .put('https://disney-parents-buddy.herokuapp.com//api/posts', post)
         .then(res=> {
             this.setState({
                 posts: res.data

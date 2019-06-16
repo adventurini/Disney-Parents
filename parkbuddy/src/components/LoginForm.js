@@ -29,7 +29,7 @@ class LoginForm extends Component {
     submitHandler(e){
         e.preventDefault()
         axios 
-            .post('https://disney-parent.herokuapp.com/api/auth/login', {
+            .post('https://disney-parents-buddy.herokuapp.com//api/auth/login', {
                 username: this.state.username,
                 password: this.state.password
             })
@@ -42,7 +42,7 @@ class LoginForm extends Component {
                 console.log(token)
                 this.props.history.push('/Posts')
                 axios
-                    .get('https://disney-parent.herokuapp.com/api/users', {headers: {Authorization: token}} )
+                    .get('https://disney-parents-buddy.herokuapp.com//api/users', {headers: {Authorization: token}} )
                     .then(res => {
                         console.log(res); 
                         }

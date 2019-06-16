@@ -46,7 +46,7 @@ toggle = (id, comment) => event => {
   addComment = (comment, id, username) => {
     const token = localStorage.getItem('token')
     axios 
-        .post('https://disney-parent.herokuapp.com/api/posts/comment', {comment:this.state.comment, repliedBy:this.state.repliedBy, post_id:this.state.post_id},  {headers: {Authorization: token}})
+        .post('https://disney-parents-buddy.herokuapp.com//api/posts/comment', {comment:this.state.comment, repliedBy:this.state.repliedBy, post_id:this.state.post_id},  {headers: {Authorization: token}})
         .then(res => {
             this.props.getPosts()
             this.setState({
@@ -60,7 +60,7 @@ toggle = (id, comment) => event => {
     const token = localStorage.getItem('token')
     console.log({comment:this.state.comment}, {post_id:this.state.post_id}, 55)
     axios 
-        .put(`https://disney-parent.herokuapp.com/api/posts/comment/${id}`, {comment: this.state.comment, repliedBy:this.state.repliedBy},  {headers: {Authorization: token}})
+        .put(`https://disney-parents-buddy.herokuapp.com//api/posts/comment/${id}`, {comment: this.state.comment, repliedBy:this.state.repliedBy},  {headers: {Authorization: token}})
         .then(res => {
             this.props.getPosts()
             this.toggle()
@@ -76,7 +76,7 @@ toggle = (id, comment) => event => {
     e.preventDefault();
     const token = localStorage.getItem('token')
     axios
-        .delete(`https://disney-parent.herokuapp.com/api/posts/comment/${id}`,  {headers: {Authorization: token}})
+        .delete(`https://disney-parents-buddy.herokuapp.com//api/posts/comment/${id}`,  {headers: {Authorization: token}})
         .then(res=> {
             this.props.getPosts()        
          })
@@ -86,7 +86,7 @@ toggle = (id, comment) => event => {
 getPost = (e, id) => {
   const token = localStorage.getItem('token')
   axios
-      .get(`https://disney-parent.herokuapp.com/api/posts/${id}`,  {headers: {Authorization: token}})
+      .get(`https://disney-parents-buddy.herokuapp.com//api/posts/${id}`,  {headers: {Authorization: token}})
       .then(res=> {
           console.log(res)
       })
@@ -97,7 +97,7 @@ deletePost = (e, id) => {
   e.preventDefault();
   const token = localStorage.getItem('token')
   axios
-      .delete(`https://disney-parent.herokuapp.com/api/posts/${id}`,  {headers: {Authorization: token}})
+      .delete(`https://disney-parents-buddy.herokuapp.com//api/posts/${id}`,  {headers: {Authorization: token}})
       .then(res=> {
         window.location.reload();
           console.log(res)

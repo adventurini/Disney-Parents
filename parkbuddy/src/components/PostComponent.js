@@ -19,7 +19,7 @@ class PostComponent extends React.Component {
     const token = localStorage.getItem("token");
     console.log(post);
     axios
-      .post("https://disney-parent.herokuapp.com/api/posts", post, {
+      .post("https://disney-parents-buddy.herokuapp.com//api/posts", post, {
         headers: { Authorization: token }
       })
       .then(res => { console.log(res);
@@ -34,7 +34,7 @@ class PostComponent extends React.Component {
   //   e.preventDefault();
   // const token = localStorage.getItem('token')
   //   axios
-  //     .put(`https://disney-parent.herokuapp.com/api/posts/${id}` , {headers: {Authorization: token}})
+  //     .put(`https://disney-parents-buddy.herokuapp.com//api/posts/${id}` , {headers: {Authorization: token}})
   //     .then(res=> {
   //       this.setState({
   //         title: this.props.state.title,

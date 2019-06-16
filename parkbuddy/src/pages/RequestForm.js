@@ -21,7 +21,7 @@ export default class Profile extends Component {
     // addPost = (e, post) => {
     //     e.preventDefault();
     //     axios
-    //         .post('https://disney-parent.herokuapp.com/api/posts', post)
+    //         .post('https://disney-parents-buddy.herokuapp.com//api/posts', post)
     //         .then(res=> {
     //             this.setState({
     //                 posts: res.data

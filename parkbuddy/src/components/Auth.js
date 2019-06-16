@@ -20,7 +20,7 @@ class Auth extends Component {
             this.props.history.push('/Login')
         }
         axios
-        .get('https://disney-parent.herokuapp.com/api/users', { headers: { Authorization: token}})
+        .get('https://disney-parents-buddy.herokuapp.com//api/users', { headers: { Authorization: token}})
         .then(res=> 
           this.setState({      
               user: res.data

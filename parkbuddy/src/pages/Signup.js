@@ -28,7 +28,7 @@ class Signup extends Component {
     submitHandler(e){
         e.preventDefault();
         axios 
-            .post('https://disney-parent.herokuapp.com/api/auth/register', {
+            .post('https://disney-parents-buddy.herokuapp.com//api/auth/register', {
                 username: this.state.username,
                 password: this.state.password,
                 accountType: this.state.accountType
