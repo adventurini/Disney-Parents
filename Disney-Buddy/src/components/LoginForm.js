@@ -1,12 +1,12 @@
-import React, {Component} from 'react';
+import React, {Component} from '../../node_modules/react';
 import {
     Container, Col, Form,
     FormGroup, Label, Input,
     Button,
-  } from 'reactstrap';
+  } from '../../node_modules/reactstrap/lib';
 import './login.css'
-import axios from 'axios';
-import {withRouter} from 'react-router-dom';
+import axios from '../../node_modules/axios';
+import {withRouter} from '../../node_modules/react-router-dom';
 
 
 

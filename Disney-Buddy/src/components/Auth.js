@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React, {Component} from '../../node_modules/react';
 import {getToken} from '../helpers/getToken'
-import axios from 'axios';
-import {withRouter} from 'react-router-dom'
+import axios from '../../node_modules/axios';
+import {withRouter} from '../../node_modules/react-router-dom'
 import Login from '../pages/Login';
 
 class Auth extends Component {

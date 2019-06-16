@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React, {Component} from '../../node_modules/react';
 import {
     Container, Col, Form,
     FormGroup, Label, Input,
     Button,
-  } from 'reactstrap';
-import axios from 'axios';
+  } from '../../node_modules/reactstrap/lib';
+import axios from '../../node_modules/axios';
 import './signup.css'
 
 class Signup extends Component {

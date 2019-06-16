@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Redirect} from 'react-router-dom';
+import React, {Component} from '../../node_modules/react';
+import {Redirect} from '../../node_modules/react-router-dom';
 import Login from './Login'
 
 export default class Home extends Component {

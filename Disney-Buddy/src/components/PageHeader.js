@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import {Jumbotron, Button} from 'reactstrap';
+import React, { Component } from '../../node_modules/react';
+import {Jumbotron, Button} from '../../node_modules/reactstrap/lib';
 import './pageheader.css';
-import {Link} from 'react-router-dom'
+import {Link} from '../../node_modules/react-router-dom'
  
 export default class PageHeader extends Component {
   render() {
