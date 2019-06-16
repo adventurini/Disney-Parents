@@ -1,8 +1,8 @@
-import React, {Component} from '../../node_modules/react';
-import axios from '../../node_modules/axios';
+import React, {Component} from 'react';
+import axios from 'axios';
 import NavBar from '../components/NavBar'
 import PostComponent from '../components/PostComponent';
-import {Jumbotron, Container} from '../../node_modules/reactstrap/lib'
+import {Jumbotron, Container} from 'reactstrap/lib'
 
 
 export default class Profile extends Component {

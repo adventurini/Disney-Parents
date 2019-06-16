@@ -1,8 +1,8 @@
-import React from "../../node_modules/react";
-import { Button, Form, FormGroup, Label, Input, Container } from "../../node_modules/reactstrap/lib";
+import React from "react";
+import { Button, Form, FormGroup, Label, Input, Container } from "reactstrap/lib";
 import "./postcomponent.css";
-import axios from "../../node_modules/axios";
-import {withRouter} from '../../node_modules/react-router-dom'
+import axios from "axios";
+import {withRouter} from 'react-router-dom'
 import Post from "../pages/Post";
 
 class PostComponent extends React.Component {

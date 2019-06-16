@@ -1,10 +1,10 @@
-import React, {Component} from '../../node_modules/react';
+import React, {Component} from 'react';
 import image from '../assets/Mickey.jpg'
 import { Card, CardImg, CardBody,
-    CardTitle, CardSubtitle, Button, Container, Input, Form } from '../../node_modules/reactstrap/lib';
+    CardTitle, CardSubtitle, Button, Container, Input, Form } from 'reactstrap/lib';
 import './post.css';
-import {Link} from '../../node_modules/react-router-dom';
-import axios from '../../node_modules/axios'
+import {Link} from 'react-router-dom';
+import axios from 'axios'
 
 export default class Post extends Component {
     constructor(props){

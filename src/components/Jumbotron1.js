@@ -1,6 +1,6 @@
-import React, {Component} from '../../node_modules/react';
+import React, {Component} from 'react';
 import './jumbotron.css';
-import {Button, Jumbotron} from '../../node_modules/reactstrap/lib';
+import {Button, Jumbotron} from 'reactstrap/lib';
 
 class Jumbotron1 extends Component {
     render(){

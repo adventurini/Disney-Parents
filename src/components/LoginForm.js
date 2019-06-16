@@ -1,48 +1,61 @@
-import React, {Component} from '../../node_modules/react';
+import React, {Component} from 'react';
 import {
     Container, Col, Form,
     FormGroup, Label, Input,
     Button,
-  } from '../../node_modules/reactstrap/lib';
-import axios from '../../node_modules/axios';
-import './signup.css'
+  } from 'reactstrap/lib';
+import './login.css'
+import axios from 'axios';
+import {withRouter} from 'react-router-dom';
 
-class Signup extends Component {
-    state={
+
+
+class LoginForm extends Component {
+    constructor(props){
+        super(props);
+    this.state={
         username: '',
-        password: '',
-        accountType: ''
+        password: ''
     }
+}
 
-    componentDidMount(){
-        
-    }
 
     changeHandler = e => {
         this.setState({
             [e.target.name]: e.target.value
         })
-        
     }
 
     submitHandler(e){
-        e.preventDefault();
+        e.preventDefault()
         axios 
-            .post('https://disney-parents-buddy.herokuapp.com/api/auth/register', {
+            .post('https://disney-parents-buddy.herokuapp.com/api/auth/login', {
                 username: this.state.username,
-                password: this.state.password,
-                accountType: this.state.accountType
+                password: this.state.password
             })
             .then(res => {
-                this.props.toggle();
                 console.log(res)
+                const {token, username, userId} = res.data
+                localStorage.setItem('token', token)
+                localStorage.setItem('username', username)
+                localStorage.setItem('userId', userId)
+                console.log(token)
+                this.props.history.push('/Posts')
+                axios
+                    .get('https://disney-parents-buddy.herokuapp.com/api/users', {headers: {Authorization: token}} )
+                    .then(res => {
+                        console.log(res); 
+                        }
+                        )
+                    .catch(err=> console.log(err))
             })
-            .catch(err=> console.log(err))
     }
+
+
     render(){
         return(
-            <Container className="App Sign-up">
-            <h2 className='display-4 h2'>Register</h2>
+            <Container className="App">
+            <h2 className='display-4 h2'>Sign In</h2>
             <Form className="form" onSubmit={(e) => this.submitHandler(e)}>
                 <Col>
                 <FormGroup>
@@ -52,7 +65,7 @@ class Signup extends Component {
                     name="username"
                     id="exampleUser"
                     placeholder="Username"
-                    onChange={this.changeHandler}
+                    onChange= {this.changeHandler}
                     />
                 </FormGroup>
                 </Col>
@@ -64,7 +77,7 @@ class Signup extends Component {
                     name="password"
                     id="examplePassword"
                     placeholder="********"
-                    onChange={this.changeHandler}
+                    onChange= {this.changeHandler}
                     />
                 </FormGroup>
                 </Col>
@@ -75,4 +88,4 @@ class Signup extends Component {
     }
 }
 
-export default Signup
+export default withRouter(LoginForm);

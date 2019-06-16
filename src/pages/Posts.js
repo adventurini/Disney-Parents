@@ -1,5 +1,5 @@
-import React, {Component} from '../../node_modules/react';
-import axios from '../../node_modules/axios';
+import React, {Component} from 'react';
+import axios from 'axios';
 import Post from './Post';
 import NavBar from '../components/NavBar';
 import PageHeader from '../components/PageHeader'

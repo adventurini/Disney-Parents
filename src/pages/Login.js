@@ -1,4 +1,4 @@
-import React, {Component} from '../../node_modules/react';
+import React, {Component} from 'react';
 import LoginForm from '../components/LoginForm'
 import Jumbotron1 from '../components/Jumbotron1'
 import Signup from './Signup'
