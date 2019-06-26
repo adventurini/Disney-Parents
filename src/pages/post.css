@@ -16,6 +16,7 @@
 }
 
 .wrap{
+    display: flex;
     padding-left:120px;
     padding-right:120px;
     padding-bottom: 40px;
@@ -27,7 +28,12 @@
     font-size: 20px
 }
 
+.flex{
+    display: flex;
+}
+
 .shadow{
+    width: 95%;
     box-shadow: 5px 10px;
 }
 
@@ -88,6 +94,11 @@ input{
     width:50%;
 }
 
+img{
+    width: 30%;
+    margin: 0 auto;
+}
+
 /* .teal{
     background-color: rgb(76, 178, 222);
 } */
@@ -99,3 +110,4 @@ input{
 .hidden:hover{
     display: block
 } */
+
