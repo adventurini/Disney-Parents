@@ -2,7 +2,7 @@
 
 Deployed on [Netlify](https://hopeful-chandrasekhar-37916b.netlify.com).
 
-This application uses React with Authentication to create a full CRUD, RESTful API. It was built during Lambda School's Build Weeks.
+This application uses React with Authentication to create a full CRUD, RESTful API. 
 
 Built during Lambda Builds Week with one backend and one UI designer.
 
